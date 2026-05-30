@@ -130,7 +130,14 @@ fetch('./products.json')
 
         container.innerHTML += `
         <div class="card">
-
+<img src="${product.image}"
+style="
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
+">
             <h3>${product.name}</h3>
 
             <p>কোড: ${product.id}</p>
