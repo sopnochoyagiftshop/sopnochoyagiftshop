@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "SP001",
+    "name": "ভালোবাসার ছোঁয়া",
+    "price": "3350",
+    "stock": "available",
+    "category": "premium",
+    "image": "product1.jpg"
+  },
+
+  {
+    "id": "SP002",
+    "name": "স্বপ্নময় উপহার",
+    "price": "1850",
+    "stock": "available",
+    "category": "classic",
+    "image": "product2.jpg"
+  }
+]
