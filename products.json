@@ -6,7 +6,7 @@
     "stock": "available",
     "category": "premium",
     "image": "product1.png"
-    "description": "প্রিমিয়াম গিফট কম্বো",
+    "description": "প্রিমিয়াম গিফট কম্বো"
   },
   {
     "id": "SP002",
@@ -15,6 +15,6 @@
     "stock": "available",
     "category": "classic",
     "image": "product2.png"
-    "description": "প্রিমিয়াম গিফট কম্বো",
+    "description": "প্রিমিয়াম গিফট কম্বো"
   }
 ]
