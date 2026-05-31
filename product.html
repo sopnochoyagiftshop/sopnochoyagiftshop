@@ -55,7 +55,7 @@ margin-top:15px;
 <p><strong>দাম:</strong> ৳ <span id="price"></span></p>
 
 <p><strong>স্টক:</strong> <span id="stock"></span></p>
-
+<p id="description"></p>
 <a id="orderBtn"
 class="order"
 target="_blank">
@@ -92,7 +92,8 @@ product.price;
 
 document.getElementById("stock").innerText =
 product.stock;
-
+document.getElementById("description").innerText =
+product.description;
 document.getElementById("orderBtn").href =
 `https://wa.me/8801344141394?text=আমি ${product.name} (${product.id}) অর্ডার করতে চাই`;
 
