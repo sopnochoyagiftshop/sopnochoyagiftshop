@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Details</title>
+
+<style>
+
+body{
+font-family:sans-serif;
+margin:0;
+padding:20px;
+background:#f7f7f7;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:15px;
+}
+
+img{
+width:100%;
+border-radius:15px;
+}
+
+.order{
+display:inline-block;
+padding:12px 25px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin-top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img id="image">
+
+<h1 id="name"></h1>
+
+<p><strong>কোড:</strong> <span id="code"></span></p>
+
+<p><strong>দাম:</strong> ৳ <span id="price"></span></p>
+
+<p><strong>স্টক:</strong> <span id="stock"></span></p>
+
+<a id="orderBtn"
+class="order"
+target="_blank">
+WhatsApp এ অর্ডার করুন
+</a>
+
+</div>
+
+<script>
+
+const params =
+new URLSearchParams(window.location.search);
+
+const id = params.get("id");
+
+fetch("products.json")
+.then(res=>res.json())
+.then(products=>{
+
+const product =
+products.find(p=>p.id===id);
+
+document.getElementById("image").src =
+product.image;
+
+document.getElementById("name").innerText =
+product.name;
+
+document.getElementById("code").innerText =
+product.id;
+
+document.getElementById("price").innerText =
+product.price;
+
+document.getElementById("stock").innerText =
+product.stock;
+
+document.getElementById("orderBtn").href =
+`https://wa.me/8801344141394?text=আমি ${product.name} (${product.id}) অর্ডার করতে চাই`;
+
+});
+
+</script>
+
+</body>
+</html>
